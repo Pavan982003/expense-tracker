@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+</head>
+<body>
+
+<h2>Add Expense</h2>
+
+<form method="POST">
+    Amount: <input type="number" name="amount" required><br><br>
+    Category: <input type="text" name="category" required><br><br>
+    <button type="submit">Add</button>
+</form>
+
+<h2>Summary</h2>
+
+{% for row in data %}
+    <p>{{row[0]}} : {{row[1]}}</p>
+{% endfor %}
+
+</body>
+</html>
